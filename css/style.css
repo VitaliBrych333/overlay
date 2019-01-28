@@ -1,0 +1,73 @@
+.overlay-video {
+  display: none;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  -ms-transition: opacity 600ms ease-in;
+  transition: opacity 600ms ease-in;
+  -ms-transition: opacity .6s;
+  transition: opacity .6s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 999999;
+}
+
+.o1 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  -ms-transition: opacity 600ms ease-out;
+  transition: opacity 600ms ease-out;
+  -ms-transition: opacity .6s;
+  transition: opacity .6s;
+}
+
+.videoWrapperExt {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 982px;
+  padding: 0 20px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 80%;
+}
+
+.close {
+  background-image:url(http://djit.ac/assets/images/news/mark.png);
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  cursor: pointer;
+  z-index: 9999;
+  height: 40px;
+  width: 40px;
+  background-size: 40px;
+  @media (max-width: 767px) and (orientation: landscape) {
+    display: none;
+  }
+}
+
+.start {
+  text-align:center;
+  font-size:40px;
+  text-decoration:underline;
+  color:blue;
+  text-transform:uppercase;
+  cursor:pointer;
+}
